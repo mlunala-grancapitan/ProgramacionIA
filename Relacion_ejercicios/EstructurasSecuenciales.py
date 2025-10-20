@@ -1,4 +1,4 @@
-#Programa: RelacionEjercicios.py
+#Programa: EstructurasSecuenciales.py
 #Propósito: Realización de los distintos ejercicios para la iniciación en python
 #Autor: Manuel Luna Alarcón
 #Fecha: 15/10/2025
@@ -6,13 +6,13 @@
 while True:
     #Menú de opciones del programa
     print("=======RELACIÓN DE EJERCICIOS 1=======")
-    print('1. Ejercicio 1')
-    print('2. Ejercicio 2')
-    print('3. Ejercicio 3')
-    print('4. Ejercicio 4')
-    print('5. Ejercicio 5')
-    print('6. Ejercicio 6')
-    print('7. Salir')
+    print('1. Ejercicio 1: Saludo personalizado')
+    print('2. Ejercicio 2: Cálculo de la hipotenusa')
+    print('3. Ejercicio 3: Conversión de minutos a horas y minutos')
+    print('4. Ejercicio 4: Inversión de un número de dos cifras')
+    print('5. Ejercicio 5: Cálculo de la hora de llegada')
+    print('6. Ejercicio 6: Cálculo de puntuación y nota normalizada')
+    print('7. Salir del programa')
 
     opcion = input('Elige una opción (1-7): ')
 
@@ -37,10 +37,10 @@ while True:
 
         print(f"{minutos} minutos son {horas} horas y {minutos_restantes} minutos.")
     elif opcion == '4':
-        numerillo = int(input("Introduce un número entero: "))
-        if 10 <= numerillo <= 99:
-            decenas = numerillo // 10
-            unidades = numerillo % 10
+        numerillo = int(input("Introduce un número entero de dos cifras: "))
+        if 10 <= numerillo <= 99: # Comprobamos que el número tiene dos cifras
+            decenas = numerillo // 10 # Cálculo de las decenas
+            unidades = numerillo % 10 # Cálculo de las unidades
 
             #Formación del número invertido
             numero_invertido = unidades * 10 + decenas

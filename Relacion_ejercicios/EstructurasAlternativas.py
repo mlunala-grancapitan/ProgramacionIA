@@ -1,4 +1,4 @@
-# Programa: RelacionEjercicios3.py
+# Programa: EstructurasAlternativas.py
 # Propósito: Realización de los distintos ejercicios para la iniciación en python
 # Autor: Manuel Luna Alarcón
 # Fecha: 17/10/2025
@@ -7,15 +7,15 @@ import math
 
 while True:
     print("=======RELACIÓN DE EJERCICIOS 3=======")
-    print('1. Ejercicio 1')
-    print('2. Ejercicio 2')
-    print('3. Ejercicio 3')
-    print('4. Ejercicio 4')
-    print('5. Ejercicio 5')
-    print('6. Ejercicio 6')
-    print('7. Ejercicio 7')
-    print('8. Ejercicio 8')
-    print('9. Salir')
+    print('1. Ejercicio 1: Comparación de edades')
+    print('2. Ejercicio 2: Clasificación de triángulos')
+    print('3. Ejercicio 3: Año bisiesto')
+    print('4. Ejercicio 4: Desglose de billetes y monedas')
+    print('5. Ejercicio 5: Día de la semana')
+    print('6. Ejercicio 6: Mayor de tres números')
+    print('7. Ejercicio 7: Mayor de cinco números')
+    print('8. Ejercicio 8: Calificación cualitativa')
+    print('9. Salir del programa')
 
     opcion = input('Elige una opción (1-9): ')
 

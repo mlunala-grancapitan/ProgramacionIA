@@ -1,4 +1,4 @@
-# Programa: RelacionEjercicios2.py
+# Programa: EstructurasRepetitivas.py
 # Propósito: Realización de los distintos ejercicios para la iniciación en python
 # Autor: Manuel Luna Alarcón
 # Fecha: 16/10/2025
@@ -8,14 +8,14 @@ import random
 while True:
     # Menú de opciones del programa
     print("=======RELACIÓN DE EJERCICIOS 2=======")
-    print('1. Ejercicio 1')
-    print('2. Ejercicio 2')
-    print('3. Ejercicio 3')
-    print('4. Ejercicio 4')
-    print('5. Ejercicio 5')
-    print('6. Ejercicio 6')
-    print('7. Ejercicio 7')
-    print('8. Salir')
+    print('1. Ejercicio 1: Números pares entre dos números')
+    print('2. Ejercicio 2: Conteo de números mayores, menores e iguales a cero')
+    print('3. Ejercicio 3: Juego de adivinar el número')
+    print('4. Ejercicio 4: Suma y conteo en un intervalo')
+    print('5. Ejercicio 5: Comprobación de número primo')
+    print('6. Ejercicio 6: Números primos')
+    print('7. Ejercicio 7: Tabla de amortización de un préstamo')
+    print('8. Salir del programa')
 
     opcion = input('Elige una opción (1-8): ')
 
@@ -70,7 +70,7 @@ while True:
             else: # Acierto
                 print(f"¡Felicidades! Has acertado el número {numero} en {intento} intentos.")
                 break
-        else: # Si se agotan los intentos
+        else: # Sí se agotan los intentos
             print(f"Lo siento, has agotado tus intentos. El número era {numero}.")
 
     elif opcion == '4':
@@ -140,10 +140,10 @@ while True:
     elif opcion == '7':
         prestamo = float(input("Importe del préstamo (€): "))
         interes_anual = float(input("Tasa de interés anual (%): "))
-        anios = int(input("Plazo de pago (años): "))
+        years = int(input("Plazo de pago (años): "))
 
         # Cálculos básicos
-        meses = anios * 12
+        meses = years * 12
         interes_mensual = interes_anual / 100 / 12
 
         # Fórmula de la cuota mensual (metodo francés buscado en chatGPT)
