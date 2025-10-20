@@ -1,7 +1,9 @@
-# Programa: EstructurasRepetitivas.py
-# Propósito: Realización de los distintos ejercicios para la iniciación en python
-# Autor: Manuel Luna Alarcón
-# Fecha: 16/10/2025
+"""
+Programa: EstructurasRepetitivas.py
+Propósito: Realización de los distintos ejercicios para la iniciación en python
+Autor: Manuel Luna Alarcón
+Fecha: 16/10/2025
+"""
 
 import random
 

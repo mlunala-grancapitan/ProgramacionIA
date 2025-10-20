@@ -1,7 +1,9 @@
-# Programa: RelacionEjercicios4.py
-# Propósito: Realización del primer ejercicio de la relación de ejercicios 4
-# Autor: Manuel Luna Alarcón
-# Fecha: 18/10/2025
+"""
+Programa: RelacionEjercicios4.py
+Propósito: Realización del primer ejercicio de la relación de ejercicios 4
+Autor: Manuel Luna Alarcón
+Fecha: 18/10/2025
+"""
 
 # Menú de opciones del programa
 def menu(opciones):

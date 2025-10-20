@@ -1,10 +1,12 @@
-#Programa: EstructurasSecuenciales.py
-#Propósito: Realización de los distintos ejercicios para la iniciación en python
-#Autor: Manuel Luna Alarcón
-#Fecha: 15/10/2025
+"""
+Programa: EstructurasSecuenciales.py
+Propósito: Realización de los distintos ejercicios para la iniciación en python
+Autor: Manuel Luna Alarcón
+Fecha: 15/10/2025
+"""
 
 while True:
-    #Menú de opciones del programa
+    # Menú de opciones del programa
     print("=======RELACIÓN DE EJERCICIOS 1=======")
     print('1. Ejercicio 1: Saludo personalizado')
     print('2. Ejercicio 2: Cálculo de la hipotenusa')
@@ -16,7 +18,7 @@ while True:
 
     opcion = input('Elige una opción (1-7): ')
 
-    #Secuencia de condicionales para ejecutar la acción correspondiente a la opción elegida
+    # Secuencia de condicionales para ejecutar la acción correspondiente a la opción elegida
     if opcion == '1':
         nombre = input("Introduce tu nombre: ")
         print("Hola, " + nombre)
@@ -24,7 +26,7 @@ while True:
         cateto1 = float(input("Introduce el valor del primer cateto: "))
         cateto2 = float(input("Introduce el valor del segundo cateto: "))
 
-        #Cálculo de la hipotenusa a partir de los catetos introducidos
+        # Cálculo de la hipotenusa a partir de los catetos introducidos
         hipotenusa = (cateto1**2 + cateto2**2)**0.5
 
         print("La hipotenusa es:", hipotenusa)
@@ -32,7 +34,7 @@ while True:
         minutos = int(input("Introduce el tiempo en minutos: "))
         horas = minutos // 60
 
-        #Cálculo de los minutos restantes
+        # Cálculo de los minutos restantes
         minutos_restantes = minutos % 60
 
         print(f"{minutos} minutos son {horas} horas y {minutos_restantes} minutos.")
@@ -42,7 +44,7 @@ while True:
             decenas = numerillo // 10 # Cálculo de las decenas
             unidades = numerillo % 10 # Cálculo de las unidades
 
-            #Formación del número invertido
+            # Formación del número invertido
             numero_invertido = unidades * 10 + decenas
 
             print("Número invertido:", numero_invertido)

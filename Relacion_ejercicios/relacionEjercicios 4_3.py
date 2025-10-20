@@ -35,7 +35,7 @@ def morse(number):
     cadena = str(numero_abs)
     return ' '.join(traduce_morse[d] for d in cadena)
 
-
+# Programa principal
 if __name__ == "__main__":
     numero = int(input("Introduzca un número entero: "))
     print("Representación en palotes:")

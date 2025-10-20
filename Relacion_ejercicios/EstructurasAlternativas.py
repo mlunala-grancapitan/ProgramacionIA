@@ -1,7 +1,9 @@
-# Programa: EstructurasAlternativas.py
-# Propósito: Realización de los distintos ejercicios para la iniciación en python
-# Autor: Manuel Luna Alarcón
-# Fecha: 17/10/2025
+"""
+Programa: EstructurasAlternativas.py
+Propósito: Realización de los distintos ejercicios para la iniciación en python
+Autor: Manuel Luna Alarcón
+Fecha: 17/10/2025
+"""
 
 import math
 
