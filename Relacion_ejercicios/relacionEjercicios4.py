@@ -5,85 +5,89 @@ Autor: Manuel Luna Alarcón
 Fecha: 18/10/2025
 """
 
-# Menú de opciones del programa
-def menu(opciones):
-    while True:
-        print("\nSeleccione una opción:")
-        for i, opt in enumerate(opciones, 1):
-            print(f"{i}. {opt}")
-        elegido = input("Opción: ").strip()
-        if elegido.isdigit(): # Comprobamos que es un número
-            n = int(elegido)
-            if 1 <= n <= len(opciones): # Comprobamos que está en el rango
-                return n
-        print("Opción incorrecta. Intente de nuevo.")
+try:
+    # Función para sumar dos números
+    def sumar(a, b):
+        print(f"Resultado de la suma: {a + b}")
 
-# Función para sumar dos números
-def sumar(a, b):
-    print(f"Resultado de la suma: {a + b}")
+    # Función para restar dos números
+    def restar(a, b):
+        print(f"Resultado de la resta: {a - b}")
 
-# Función para restar dos números
-def restar(a, b):
-    print(f"Resultado de la resta: {a - b}")
+    # Función para multiplicar dos números
+    def multiplicar(a, b):
+        print(f"Resultado de la multiplicación: {a * b}")
 
-# Función para multiplicar dos números
-def multiplicar(a, b):
-    print(f"Resultado de la multiplicación: {a * b}")
+    # Función para dividir dos números
+    def dividir(a, b):
+        if b == 0: # Comprobamos división por cero
+            print("No se puede dividir por cero.")
+        else:
+            print(f"Resultado de la división: {a / b}")
 
-# Función para dividir dos números
-def dividir(a, b):
-    if b == 0: # Comprobamos división por cero
-        print("No se puede dividir por cero.")
-    else:
-        print(f"Resultado de la división: {a / b}")
+    # Función principal del programa
+    def main():
+        number1 = 0.0
+        number2 = 0.0
+        variables_introducidas = False
+        options = [
+            "Introducir variables",
+            "Sumar",
+            "Restar",
+            "Multiplicar",
+            "Dividir",
+            "Terminar"
+        ]
 
-# Función principal del programa
-def main():
-    a = 0.0
-    b = 0.0
-    variables_introducidas = False
-    opciones = [
-        "Introducir variables",
-        "Sumar",
-        "Restar",
-        "Multiplicar",
-        "Dividir",
-        "Terminar"
-    ]
+        try:
+            # Bucle principal del programa
+            while True:
+                try:
+                    # Menú de options
+                    print("=======MENÚ DE OPCIONES=======")
+                    for i, opcion in enumerate(options, start=1):
+                        print(f"{i}. {opcion}")
 
-    # Bucle principal del programa
-    while True:
-        opcion = menu(opciones)
+                    opcion = int(input("Seleccione una opción: "))
 
-        if opcion == 1:
-            a = float(input("Introduzca a: "))
-            b = float(input("Introduzca b: "))
-            variables_introducidas = True
-        elif opcion == 2:
-            if variables_introducidas:
-                sumar(a, b)
-            else:
-                print("Primero introduzca las variables (opción 1).")
-        elif opcion == 3:
-            if variables_introducidas:
-                restar(a, b)
-            else:
-                print("Primero introduzca las variables (opción 1).")
-        elif opcion == 4:
-            if variables_introducidas:
-                multiplicar(a, b)
-            else:
-                print("Primero introduzca las variables (opción 1).")
-        elif opcion == 5:
-            if variables_introducidas:
-                dividir(a, b)
-            else:
-                print("Primero introduzca las variables (opción 1).")
-        else:  # Terminar el programa
-            print("Fin del programa.")
-            break
+                    if opcion == 1:
+                        try:
+                            number1 = float(input("Introduzca a: "))
+                            number2 = float(input("Introduzca number2: "))
+                            variables_introducidas = True
+                        except ValueError:
+                            print("Entrada inválida. Por favor, introduzca números válidos.")
+                    elif opcion == 2:
+                        if variables_introducidas:
+                            sumar(number1, number2)
+                        else:
+                            print("Primero introduzca las variables (opción 1).")
+                    elif opcion == 3:
+                        if variables_introducidas:
+                            restar(number1, number2)
+                        else:
+                            print("Primero introduzca las variables (opción 1).")
+                    elif opcion == 4:
+                        if variables_introducidas:
+                            multiplicar(number1, number2)
+                        else:
+                            print("Primero introduzca las variables (opción 1).")
+                    elif opcion == 5:
+                        if variables_introducidas:
+                            dividir(number1, number2)
+                        else:
+                            print("Primero introduzca las variables (opción 1).")
+                    else:  # Terminar el programa
+                        print("Fin del programa.")
+                        break
+                except ValueError:
+                    print("Entrada inválida. Por favor, introduzca un número válido.")
+        except KeyboardInterrupt:
+            print("\nPrograma interrumpido por el usuario.")
 
-# Ejecución del programa
-if __name__ == "__main__":
-    main()
+    # Ejecución del programa
+    if __name__ == "__main__":
+        main()
 
+except Exception as e:
+    print(f"Ocurrió un error: {e}")
