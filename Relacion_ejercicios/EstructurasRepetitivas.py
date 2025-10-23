@@ -23,8 +23,8 @@ while True:
 
     # Secuencia de condicionales para ejecutar la acción correspondiente a la opción elegida
     if opcion == '1':
-        numero1 = int(input('Elige un numero: '))
-        numero2 = int(input('Elige otro numero: '))
+        numero1 = int(input('Elige un number: '))
+        numero2 = int(input('Elige otro number: '))
 
         # Averiguamos los pares entre ambos números
         if numero1 < numero2:
