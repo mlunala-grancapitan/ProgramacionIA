@@ -29,7 +29,7 @@ try:
     def main():
         number1 = 0.0
         number2 = 0.0
-        variables_introducidas = False
+        introduced_variables = False
         options = [
             "Introducir variables",
             "Sumar",
@@ -45,35 +45,35 @@ try:
                 try:
                     # Menú de options
                     print("=======MENÚ DE OPCIONES=======")
-                    for i, opcion in enumerate(options, start=1):
-                        print(f"{i}. {opcion}")
+                    for i, option in enumerate(options, start=1):
+                        print(f"{i}. {option}")
 
-                    opcion = int(input("Seleccione una opción: "))
+                    option = int(input("Seleccione una opción: "))
 
-                    if opcion == 1:
+                    if option == 1:
                         try:
                             number1 = float(input("Introduzca a: "))
                             number2 = float(input("Introduzca number2: "))
-                            variables_introducidas = True
+                            introduced_variables = True
                         except ValueError:
                             print("Entrada inválida. Por favor, introduzca números válidos.")
-                    elif opcion == 2:
-                        if variables_introducidas:
+                    elif option == 2:
+                        if introduced_variables:
                             sumar(number1, number2)
                         else:
                             print("Primero introduzca las variables (opción 1).")
-                    elif opcion == 3:
-                        if variables_introducidas:
+                    elif option == 3:
+                        if introduced_variables:
                             restar(number1, number2)
                         else:
                             print("Primero introduzca las variables (opción 1).")
-                    elif opcion == 4:
-                        if variables_introducidas:
+                    elif option == 4:
+                        if introduced_variables:
                             multiplicar(number1, number2)
                         else:
                             print("Primero introduzca las variables (opción 1).")
-                    elif opcion == 5:
-                        if variables_introducidas:
+                    elif option == 5:
+                        if introduced_variables:
                             dividir(number1, number2)
                         else:
                             print("Primero introduzca las variables (opción 1).")
