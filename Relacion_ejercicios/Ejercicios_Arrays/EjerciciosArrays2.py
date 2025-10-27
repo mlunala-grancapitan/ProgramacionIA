@@ -6,19 +6,19 @@
 try:
     ordered_list = []
 
+    # Escribimos 5 números en la lista
     for i in range(5):
-        number_introduced = int(input("Introduzca un número entre: "))
+        number_introduced = int(input(f"Introduzca un número ({i + 1}/5): "))
         ordered_list.append(number_introduced)
 
     print(ordered_list)
+    number = ordered_list[-1] # Rotamos la lista una posición a la derecha
 
-    number = ordered_list[-1]
-
+    # Desplazamos los elementos una posición a la derecha
     for n in range(len(ordered_list) - 1, 0, -1):
-        ordered_list[n] = ordered_list[n - 1]
+        ordered_list[n] = ordered_list[n - 1] # Asignamos el valor del elemento anterior
 
-    ordered_list[0] = number
-
+    ordered_list[0] = number # Colocamos el último número en la primera posición
     print(ordered_list)
 
 except ValueError:
