@@ -6,10 +6,14 @@
 import random
 
 # Ejercicio 1
-number = [random.randint(1, 100) for _ in range(100)] # Lista de 100 números aleatorios entre 1 y 100
-square = [number ** 2 for number in number] # Lista de los cuadrados de los números
-cube = [number ** 3 for number in number] # Lista de los cubos de los números
+try:
+    number = [random.randint(1, 100) for _ in range(100)]  # Lista de 100 números aleatorios entre 1 y 100
+    square = [number ** 2 for number in number]  # Lista de los cuadrados de los números
+    cube = [number ** 3 for number in number]  # Lista de los cubos de los números
 
-print(number)
-print(square)
-print(cube)
+    print(number)
+    print(square)
+    print(cube)
+
+except Exception as e:
+    print(f"Ha ocurrido un error: {e}")
